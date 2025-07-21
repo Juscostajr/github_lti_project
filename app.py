@@ -40,7 +40,7 @@ def dashboard(lti):
     if github_link:
         commits = github_service.get_all_commits(github_link[0])
         contributors = github_service.get_all_contributors(github_link[0])
-        return render_template("linked.html", github_url=github_link[0], commits=commits, contributors=contributors)
+        return render_template("dashboard.html", github_url=github_link[0], commits=commits, contributors=contributors)
     return render_template("form.html")
 
 if __name__ == '__main__':
